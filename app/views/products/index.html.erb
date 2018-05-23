@@ -1,0 +1,9 @@
+
+<% @products.each do |product| %>
+<table>
+  <tr>
+    <td><h1><%= product.title %> </h1></td>
+    <td><h1><%= product.price %> </h1></td>
+    <td><h1><%= product.category.try(:name) %> </h1></td>
+  </tr>
+<%end%>
