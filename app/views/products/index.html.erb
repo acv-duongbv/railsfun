@@ -1,9 +1,10 @@
-
-<% @products.each do |product| %>
 <table>
+<% @products.each do |product| %>
   <tr>
     <td><h1><%= product.title %> </h1></td>
     <td><h1><%= product.price %> </h1></td>
     <td><h1><%= product.category.try(:name) %> </h1></td>
+    <td><%= link_to 'read more', product_path(product)%></td>
   </tr>
 <%end%>
+</table>
